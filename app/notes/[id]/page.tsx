@@ -3,11 +3,11 @@ import { fetchNoteById } from '@/lib/api';
 import NoteDetails from "../NoteDetails.client";
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export default async function NoteDetailsPage({ params }: Props) {
-  const { id } = params
+  const { id } = await params
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery({
