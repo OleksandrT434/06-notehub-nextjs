@@ -1,4 +1,4 @@
-import AppPage from "./notes.client";
+import AppPage from "./Notes.client";
 import { fetchNotes } from "@/lib/api";
 import type { PaginatedNotes } from "@/lib/api";
 
