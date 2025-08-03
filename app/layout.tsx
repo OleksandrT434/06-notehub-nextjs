@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import TanstackProvider from "@/components/TanstackProvider/TanstackProvider";
+import TanStackProvider from "@/components/TanStackProvider/TanstackProvider";
 
 
 const geistSans = Geist({
@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
       <div id="modal-root"></div>
         <Header />
-        <TanstackProvider>{children}</TanstackProvider>
+        <TanStackProvider>{children}</TanStackProvider>
         <Footer />
       </body>
     </html>
