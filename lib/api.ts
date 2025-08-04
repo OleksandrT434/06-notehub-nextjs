@@ -4,8 +4,6 @@ import type { Note, NewNoteData} from '../types/note';
 
 export interface PaginatedNotes {
   notes: Note[];
-  page: number;
-  perPage: number;
   totalPages: number;
 }
 
@@ -40,7 +38,7 @@ export async function createNote(noteData: NewNoteData): Promise<Note> {
   return response.data;
 } 
 
-export async function deleteNote(id: number): Promise<Note> {
+export async function deleteNote(id: string): Promise<Note> {
   const response: AxiosResponse<Note> = await api.delete(`/notes/${id}`);
   return response.data;
 }
