@@ -19,7 +19,7 @@ export default function NoteList({ notes }: NoteListProps) {
     },
   });
   if (notes.length === 0) return <p>No notes found.</p>;
-  const handleDelete = (id: number) => {
+  const handleDelete = (id: string) => {
     deleteMutation.mutate(id);
   };
     return (
